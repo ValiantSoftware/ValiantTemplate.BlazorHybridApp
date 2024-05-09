@@ -20,4 +20,8 @@
     <Exec WorkingDirectory="$(ProjectDir)" Command="tailwindcss -i wwwroot/css/app.css -o wwwroot/css/app.dist.css" />
   </Target>
 
+  <Target Name="PublishTailwind" BeforeTargets="BeforePublish">
+    <Exec WorkingDirectory="$(ProjectDir)" Command="tailwindcss -i wwwroot/css/app.css -o wwwroot/css/app.dist.css" />
+  </Target>
+
 </Project>
